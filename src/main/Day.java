@@ -1,18 +1,18 @@
-package lab2;
+package main;
 
 public enum Day {
-    MON, TUE, WED, THU, FRI, SAT, SUN;
+    MON, TUE, WED, THU, FRI, SAT, SUN, ERROR;
 
     public String toString(){
         switch(this){
-            case MON: return "Monday";
-            case TUE: return "Thuesday";
-            case WED: return "Wednesday";
-            case THU: return "Thursday";
-            case FRI: return "Friday";
-            case SAT: return "Saturday";
-            case SUN: return "Sunday";
-            default: return "Monday";
+            case MON: return "Poniedziałek";
+            case TUE: return "Wtorek";
+            case WED: return "Środa";
+            case THU: return "Czwartek";
+            case FRI: return "Piątek";
+            case SAT: return "Sobota";
+            case SUN: return "Niedziela";
+            default: return "Something went wrong...";
         }
     }
 
@@ -26,7 +26,7 @@ public enum Day {
             case FRI: return SAT;
             case SAT: return SUN;
             case SUN: return MON;
-            default: return MON;
+            default: return ERROR;
         }
     }
 
@@ -40,7 +40,7 @@ public enum Day {
             case FRI: return THU;
             case SAT: return FRI;
             case SUN: return SAT;
-            default: return MON;
+            default: return ERROR;
         }
     }
 }
